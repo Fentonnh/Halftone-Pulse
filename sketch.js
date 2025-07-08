@@ -12,7 +12,7 @@ function setup() {
 function draw() {
   background(255);
 
-  let t = millis() * 0.002; // time in seconds, slow it down
+  let t = millis() * 0.02; // time in seconds, slow it down
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
@@ -26,7 +26,7 @@ function draw() {
       let wave = sin(t + offset);
 
       // Map wave to radius size
-      let r = map(wave, -1, 1, 4, 12); // min/max size
+      let r = map(wave, -1, 1, 2, 16); // min/max size
 
       ellipse(x, y, r);
     }
